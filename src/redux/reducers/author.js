@@ -25,6 +25,10 @@ const reducer = (state = initialState, action) => {
       };
 
     case ADD_BOOK:
+        return {
+          ...state,
+          books: [action.payload].concat(state.books)
+        };
     //UPDATE THE STATE ACCORDINGLY
 
     default:

@@ -7,6 +7,7 @@ import Loading from "./Loading";
 import { connect } from "react-redux";
 
 import { fetchAuthorDetail } from "./redux/actions";
+import AddBookModal from "./AddBookModal";
 
 class AuthorDetail extends Component {
   componentDidMount() {
@@ -29,6 +30,7 @@ class AuthorDetail extends Component {
               alt={authorName}
             />
           </div>
+          <AddBookModal author={author}/>
           <BookTable books={author.books} />
         </div>
       );
